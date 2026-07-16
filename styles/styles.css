@@ -1,3 +1,9 @@
+:root {
+    background-color: var(--primary-color);
+    font-size: var(--font-size-large);
+    width: var(--width-size);
+}
+
 nav {
     background-color: darkblue;
     padding: 10px;
