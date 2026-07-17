@@ -1,3 +1,13 @@
+:root {
+    --primary-color: #2f5d5a;
+    --secondary-color: #d4a94a;
+    --accent-color: #e6be5a;
+    --text-color: #222222;
+    --light-color: #ffffff;
+    --light-gray: #dfe8e6;
+    --font-main: Arial, Helvetica, sans-serif;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,8 +15,46 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #222;
+    font-family: var(--font-main);
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 30px;
+    background-color: var(--light-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header img {
+    height: 70px;
+    width: auto;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 4px;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+header nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 .hero {
@@ -28,8 +76,9 @@ body {
     width: 100%;
     margin: 0;
     padding: 20px;
-    background-color: rgba(20, 50, 50, 0.6);
-    color: white;
+    background-color: rgba(47, 93, 90, 0.6);
+    /* var(--primary-color) con transparencia */
+    color: var(--light-color);
     font-size: 2.2em;
     text-align: center;
 }
@@ -40,65 +89,37 @@ body {
     left: 40px;
     width: 65%;
     background-color: rgba(230, 190, 90, 0.9);
+    /* var(--accent-color) con transparencia */
     padding: 15px 20px;
-    border: 2px solid #d4a94a;
+    border: 2px solid var(--secondary-color);
     overflow: auto;
-    /* para que la caja se ajuste a la imagen flotante */
 }
 
 .hero article p {
     font-size: 0.9em;
     line-height: 1.4;
+    color: var(--text-color);
 }
 
 .hero article img {
     float: right;
     width: 140px;
     margin-left: 15px;
-    border: 2px solid white;
+    border: 2px solid var(--light-color);
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 10px 30px;
-    background-color: #ffffff;
-    border-bottom: 3px solid #2f5d5a;
+section {
+    padding: 20px 30px;
 }
 
-header img {
-    height: 70px;
-    width: auto;
-}
-
-header nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-header nav a {
-    text-decoration: none;
-    color: #2f5d5a;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 8px 4px;
-    transition: color 0.2s ease, border-bottom 0.2s ease;
-    border-bottom: 2px solid transparent;
-}
-
-header nav a:hover {
-    color: #d4a94a;
-    border-bottom: 2px solid #d4a94a;
+section h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
 }
 
 footer {
-    background-color: #2f5d5a;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--light-color);
     text-align: center;
     padding: 25px 20px;
 }
@@ -113,7 +134,7 @@ footer .socialmedia {
 footer .socialmedia img {
     height: 30px;
     width: 30px;
-    background-color: white;
+    background-color: var(--light-color);
     border-radius: 50%;
     padding: 5px;
     transition: transform 0.2s ease;
@@ -125,5 +146,5 @@ footer .socialmedia img:hover {
 
 footer p {
     font-size: 0.85em;
-    color: #dfe8e6;
+    color: var(--light-gray);
 }
