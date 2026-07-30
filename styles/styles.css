@@ -57,11 +57,11 @@ aside {
 }
 
 aside img {
+
     /* width: 20em;
-    text-align: center;
-    height: auto; */
-    width: 200px;
+    text-align: center; */
     height: auto;
+    width: 200px;
 }
 
 main img {
