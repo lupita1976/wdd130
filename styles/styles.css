@@ -53,11 +53,14 @@ aside {
     position: relative;
     grid-column: 1/2;
     grid-row: 1/2;
+    padding: auto;
 }
 
 aside img {
-    width: 20em;
+    /* width: 20em;
     text-align: center;
+    height: auto; */
+    width: 200px;
     height: auto;
 }
 
