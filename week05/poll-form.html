@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="styles/poll-form.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="HTML Form - User Poll Activity">
@@ -11,7 +12,7 @@
 
 <body>
     <header>
-        <h1>WDD 130 | HTML Form - User Poll</h1>
+        <h1>WDD 130 | HTML Form &ndash; User Poll</h1>
     </header>
 
     <main>
@@ -19,37 +20,46 @@
             <fieldset>
                 <legend>Contact Information</legend>
 
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" required>
-                <br>
+                <div class="form-row">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
 
-                <label for="useremail">Email:</label>
-                <input type="email" id="useremail" name="useremail" required>
+                <div class="form-row">
+                    <label for="useremail">Email:</label>
+                    <input type="email" id="useremail" name="useremail" required>
+                </div>
             </fieldset>
 
             <fieldset>
                 <legend>Questions</legend>
 
-                <label for="browser">What is your favorite internet browser?</label>
-                <select name="browser" id="browser">
-                    <option value="chrome">Chrome</option>
-                    <option value="safari">Safari</option>
-                    <option value="edge">Edge</option>
-                    <option value="brave">Brave</option>
-                    <option value="other">Other</option>
-                </select>
-                <br>
+                <div class="form-row">
+                    <label for="browser">What is your favorite internet browser?</label>
+                    <select name="browser" id="browser">
+                        <option value="chrome">Chrome</option>
+                        <option value="safari">Safari</option>
+                        <option value="edge">Edge</option>
+                        <option value="brave">Brave</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
-                <label for="pet">Do you have a household pet?</label>
-                <input type="checkbox" id="pet" name="pet">
-                <br>
+                <div class="form-row">
+                    <label for="pet">Do you have a household pet?</label>
+                    <input type="checkbox" id="pet" name="pet">
+                </div>
 
-                <label for="feedback">List the places you have lived:</label>
-                <textarea id="feedback" name="feedback" rows="4"
-                  placeholder="e.g. Stillwater Florida, Amsterdam Netherlands, Tibuktu Mali"></textarea>
+                <div class="form-row">
+                    <label for="feedback">List the places you have lived:</label>
+                    <textarea id="feedback" name="feedback" rows="4"
+                      placeholder="Stillwater Florida, Amsterdam Netherlands, Tibuktu Mali"></textarea>
+                </div>
             </fieldset>
 
-            <button type="submit">Submit Poll</button>
+            <div class="submit-row">
+                <button type="submit">Submit Poll</button>
+            </div>
         </form>
     </main>
 
